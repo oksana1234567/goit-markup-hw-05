@@ -53,8 +53,6 @@ li {
 
 .main-navigation {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-left: 85px;
 }
 
@@ -108,12 +106,33 @@ li {
   color: #2196f3;
 }
 
+.nav1 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
 .link-current:hover {
   color: #2196f3;
 }
 
 .link-current {
   color: #2196f3;
+}
+
+.link-current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .main-navigation .link-current {
@@ -128,6 +147,9 @@ li {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail li a:hover,
 .mail li a:focus {
@@ -138,12 +160,30 @@ li {
   width: 16px;
   height: 11px;
   margin-right: 10px;
+  fill: #757575;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail1-icon:hover,
+.mail1-icon:focus {
+  fill: #2196f3;
 }
 
 .mail1-icon2 {
   width: 10px;
   height: 15px;
   margin-right: 10px;
+  fill: #757575;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail1-icon2:hover,
+.mail1-icon2:focus {
+  fill: #2196f3;
 }
 
 .icon-flex {
@@ -197,7 +237,8 @@ li {
 
 .button-element-button:hover,
 .button-element-button:focus {
-  color: #2196f3;
+  background-color: #2196f3;
+  color: #ffff;
 }
 
 .button-element-button {
@@ -215,6 +256,9 @@ li {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .second-header {
@@ -251,8 +295,6 @@ li {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
-  background-color: var(--background-grey-color);
-  /* для видимости */
 }
 
 .projects {
@@ -277,6 +319,9 @@ li {
   border: 1px solid #eeeeee;
   border-radius: 5px;
   padding-bottom: 20px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-element:hover,
@@ -289,6 +334,46 @@ li {
   display: inline-block;
   width: 370px;
   height: 404px;
+}
+
+.slide::after {
+  content: "Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: translateY(450px);
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .flex-footer {
@@ -326,16 +411,14 @@ li {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-element-url:hover,
 .social-element-url:focus {
   background-color: #2196f3;
-}
-
-.icon-footer2 {
-  width: 20px;
-  height: 20px;
 }
 
 .logo2 {
@@ -394,6 +477,11 @@ li {
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-top: 9px;
+}
+
+.icon-footer2 {
+  width: 20px;
+  height: 20px;
 }
 
 .join {
