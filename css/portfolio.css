@@ -151,10 +151,11 @@ li {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mail li a:hover,
+
+/* .mail li a:hover,
 .mail li a:focus {
   color: #2196f3;
-}
+} */
 
 .mail1-icon {
   width: 16px;
@@ -166,10 +167,10 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail1-icon:hover,
+/* .mail1-icon:hover,
 .mail1-icon:focus {
   fill: #2196f3;
-}
+} */
 
 .mail1-icon2 {
   width: 10px;
@@ -181,14 +182,31 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail1-icon2:hover,
+/* .mail1-icon2:hover,
 .mail1-icon2:focus {
   fill: #2196f3;
+} */
+
+.icon-flex:hover,
+.icon-flex:focus {
+  fill: #2196f3;
+  color: #2196f3;
+}
+
+.mail1-icon {
+  fill: currentColor;
+}
+
+.mail1-icon2 {
+  fill: currentColor;
 }
 
 .icon-flex {
   display: flex;
   align-items: center;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-flex {
@@ -239,6 +257,11 @@ li {
 .button-element-button:focus {
   background-color: #2196f3;
   color: #ffff;
+  cursor: pointer;
+}
+
+.examples {
+  display: block;
 }
 
 .button-element-button {
@@ -359,11 +382,11 @@ li {
   padding-left: 24px;
   padding-right: 24px;
 
-  transition-property: opacity;
+  transition-property: opacity, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  transform: translateY(450px);
+  transform: translateY(100%);
 }
 
 .slide {
@@ -374,6 +397,7 @@ li {
 .slide:hover::after {
   opacity: 1;
   transform: translateY(0);
+  cursor: pointer;
 }
 
 .flex-footer {
